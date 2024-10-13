@@ -11,13 +11,13 @@ public:
             if(mpp.find(second) != mpp.end()){
                 indices.push_back(idx);
                 indices.push_back(mpp[second]);
-                break;
+                return indices;
             }
             else{
                 mpp[nums[idx]] = idx;
             }
             idx++;
         }
-        return indices;
+        return {};
     }
 };
