@@ -11,7 +11,12 @@ public:
             int mid = (low+high)/2;
             long time = 0;
             for(int i=0; i<n; i++){
-                time += ceil(double(double(piles[i])/double(mid)));
+                if(piles[i] % mid == 0){
+                    time += piles[i]/mid;
+                }
+                else{
+                    time += piles[i]/mid + 1;
+                }
                 
                 // cout << mid << " " << ceil(double(double(piles[i])/double(mid))) << endl;
             }
